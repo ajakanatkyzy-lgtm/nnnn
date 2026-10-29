@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Виртуалды зертхана: п-нитроанилин синтезі</title>
+<style>
+:root{--bg:#f5f3ee;--card:#fff;--tx:#1d2a2a;--mu:#5d6b6b;--ac:#0f766e;--ac2:#e8f3f1;--bd:#d9d6cc;--warn:#b45309;--ok:#15803d;--glass:#eaf4f6}
+@media(prefers-color-scheme:dark){:root{--bg:#11191a;--card:#192425;--tx:#e6efee;--mu:#9bb0ae;--ac:#2dd4bf;--ac2:#173836;--bd:#2c3d3e;--warn:#fbbf24;--ok:#4ade80;--glass:#22383b}}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--tx);line-height:1.5}
+header{padding:16px 20px;border-bottom:1px solid var(--bd)}
+h1{margin:0;font-size:1.25rem}
+header p{margin:2px 0 0;color:var(--mu);font-size:.9rem}
+.bar{height:6px;background:var(--bd)}
+.bar i{display:block;height:100%;width:0;background:var(--ac);transition:width .4s}
+main{display:grid;grid-template-columns:minmax(260px,380px) 1fr;gap:16px;padding:16px;max-width:1100px;margin:auto}
+@media(max-width:800px){main{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.tabs button{width:34px;height:34px;border-radius:50%;border:1px solid var(--bd);background:var(--card);color:var(--tx);cursor:pointer;font-weight:600}
+.tabs button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.tabs button.ok{border-color:var(--ok);color:var(--ok)}
+.tabs button.on.ok{color:#fff}
+.tabs button:disabled{opacity:.4;cursor:default}
+h2{font-size:1.05rem;margin:0 0 6px}
+.desc{margin:0 0 10px}
+.th{background:var(--ac2);border-radius:8px;padding:8px 10px;font-size:.9rem;margin:10px 0}
+.eq{font-family:ui-monospace,Menlo,monospace;font-size:.88rem;overflow-x:auto;white-space:nowrap}
+.acts{display:flex;flex-direction:column;gap:6px;margin:10px 0}
+.acts button,.nav button,.sm{font:inherit;padding:9px 12px;border-radius:8px;border:1px solid var(--ac);background:var(--card);color:var(--tx);cursor:pointer;text-align:left}
+.acts button:hover:not(:disabled){background:var(--ac2)}
+.acts button:disabled{opacity:.45;cursor:default}
+.acts button.done{border-color:var(--ok);color:var(--ok);opacity:1}
+.acts button.cool{border-color:#2563eb}
+.nav{display:flex;justify-content:space-between;gap:8px;margin-top:12px}
+.nav button.p{background:var(--ac);color:#fff;text-align:center}
+.nav button:disabled{opacity:.4;cursor:default}
+.log{font-size:.88rem;min-height:44px;margin-top:10px;color:var(--mu)}
+.log b{color:var(--tx)}
+.log .w{color:var(--warn);font-weight:600}
+svg{width:100%;height:auto;max-height:420px;display:block}
+.stage{background:linear-gradient(var(--card),var(--glass))}
+.lab{font-size:.85rem;color:var(--mu);text-align:center;margin-top:4px}
+input[type=number]{font:inherit;padding:7px;border:1px solid var(--bd);border-radius:8px;width:110px;background:var(--card);color:var(--tx)}
+details{border:1px solid var(--bd);border-radius:8px;padding:8px 10px;margin:8px 0}
+summary{cursor:pointer;font-weight:600}
+table{border-collapse:collapse;font-size:.88rem}td,th{border:1px solid var(--bd);padding:4px 8px}
+.bub{animation:up 1.2s infinite}
+@keyframes up{from{transform:translateY(0);opacity:.9}to{transform:translateY(-40px);opacity:0}}
+</style>
+</head>
+<body>
+<header>
+<h1>Виртуалды зертхана: п-нитроанилин синтезі</h1>
+<p>№9-10 тақырып · Ароматты қосылыстардың электрофильді орынбасу реакциялары · Ацетанилидті нитрлеу</p>
+</header>
+<div class="bar"><i id="pb"></i></div>
+<main>
+<section class="card">
+<div class="stage"><svg viewBox="0 0 300 290" role="img" aria-label="Зертханалық колба">
+<defs><clipPath id="cp"><path id="fl0" d="M125 40H175V105L232 215Q240 232 222 232H78Q60 232 68 215L125 105Z"/></clipPath></defs>
+<rect id="stand" x="40" y="250" width="220" height="6" rx="3" fill="#888"/>
+<g id="flame" opacity="0"><path d="M130 250Q140 215 150 235Q158 215 170 250Z" fill="#f97316"/><path d="M142 250Q150 232 158 250Z" fill="#fde047"/></g>
+<g clip-path="url(#cp)"><rect id="liq" x="50" y="232" width="200" height="0" fill="#efece4" style="transition:all .5s"/>
+<g id="ppt"></g><g id="bubs" opacity="0"><circle class="bub" cx="110" cy="215" r="4" fill="#fff" opacity=".7"/><circle class="bub" cx="150" cy="205" r="5" fill="#fff" opacity=".7" style="animation-delay:.4s"/><circle class="bub" cx="190" cy="215" r="4" fill="#fff" opacity=".7" style="animation-delay:.8s"/></g></g>
+<path d="M125 40H175V105L232 215Q240 232 222 232H78Q60 232 68 215L125 105Z" fill="none" stroke="var(--tx)" stroke-width="3" stroke-linejoin="round"/>
+<g id="ice" opacity="0" style="transition:opacity .5s"><rect x="50" y="195" width="200" height="52" rx="8" fill="#93c5fd" opacity=".55"/><rect x="62" y="205" width="22" height="18" rx="3" fill="#fff" opacity=".7"/><rect x="95" y="222" width="22" height="18" rx="3" fill="#fff" opacity=".7"/><rect x="185" y="208" width="22" height="18" rx="3" fill="#fff" opacity=".7"/><rect x="215" y="224" width="22" height="18" rx="3" fill="#fff" opacity=".7"/></g>
+<g id="funnel" opacity="0"><path d="M135 5H165L155 28H145Z" fill="none" stroke="var(--tx)" stroke-width="2"/><circle id="drop" cx="150" cy="34" r="3" fill="#eab308" opacity="0"/></g>
+<rect x="262" y="40" width="12" height="130" rx="6" fill="none" stroke="var(--tx)" stroke-width="2"/>
+<rect id="hg" x="265" y="160" width="6" height="0" fill="#dc2626"/><circle cx="268" cy="182" r="10" fill="#dc2626"/>
+<text id="tt" x="268" y="206" text-anchor="middle" font-size="13" fill="var(--tx)" font-weight="700">22°C</text>
+</svg></div>
+<div class="lab" id="lab">Колба бос</div>
+<div class="log" id="log"></div>
+</section>
+<section class="card">
+<div class="tabs" id="tabs"></div>
+<h2 id="st"></h2>
+<p class="desc" id="sd"></p>
+<div id="sx"></div>
+<div class="acts" id="acts"></div>
+<div class="th" id="th"></div>
+<div class="nav"><button id="pv">← Артқа</button><button id="nx" class="p">Алға →</button></div>
+</section>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const S={liq:0,col:'#efece4',temp:22,ice:0,heat:0,ppt:0,pc:'#f7f2d8',funnel:0,bub:0};
+let tm,cur=0;
+const dots=[];for(let i=0;i<40;i++)dots.push([75+((i*53)%150),150+((i*37)%75),2+(i%3)]);
+$('ppt').innerHTML=dots.map(d=>`<circle cx="${d[0]}" cy="${d[1]}" r="${d[2]}" opacity="0"/>`).join('');
+function draw(){
+ const h=S.liq*140;$('liq').setAttribute('y',232-h);$('liq').setAttribute('height',h);$('liq').setAttribute('fill',S.col);
+ $('ice').setAttribute('opacity',S.ice);$('flame').setAttribute('opacity',S.heat);$('funnel').setAttribute('opacity',S.funnel);$('bubs').setAttribute('opacity',S.bub);
+ [...$('ppt').children].forEach((c,i)=>{c.setAttribute('opacity',i<S.ppt*40?.9:0);c.setAttribute('fill',S.pc)});
+ const t=Math.max(-10,Math.min(110,S.temp));$('hg').setAttribute('height',(t+10)/120*130);$('hg').setAttribute('y',172-(t+10)/120*130);
+ $('tt').textContent=Math.round(S.temp)+'°C';$('tt').setAttribute('fill',S.temp>15&&cur===3?'#dc2626':'var(--tx)');
+}
+function tempTo(t,cb){clearInterval(tm);tm=setInterval(()=>{const d=t-S.temp;S.temp+=Math.sign(d)*Math.min(2,Math.abs(d));draw();if(S.temp===t){clearInterval(tm);cb&&cb()}},40)}
+function log(m,w){$('log').innerHTML=(w?'<span class="w">⚠ '+m+'</span>':'<b>✔</b> '+m)}
+function lab(t){$('lab').textContent=t}
+const A='<span class="eq">';
+const steps=[
+{t:'Құрал-жабдық пен қауіпсіздік',d:'Жұмысты бастамас бұрын барлық құралды іріктеп алыңыз. Концентрлі H₂SO₄ мен HNO₃ — күшті күйдіргіш заттар: қолғап, көзілдірік, халат киіп, тартпа шкафта жұмыс істейміз.',
+ th:'Реактивтер: ацетанилид (1 г), мұздай сірке қышқылы (1 мл), конц. H₂SO₄ (2 мл), нитрлеуші қоспа (3,5 мл), NaOH, этил спирті (15–20 мл), мұз, лакмус қағазы.',
+ a:[['Көлемі 100 мл дөңес түпті колба',()=>{lab('Колба дайын')}],['Тамшылатқыш воронка',()=>{S.funnel=1}],['Шыны таяқша және термометр',()=>{}],['Пробирка, стақан, сүзгі қағаз',()=>{}],['Қолғап пен көзілдірік кию',()=>{}],['Мұз бен су дайындау',()=>{}]]},
+{t:'Ацетанилид пен сірке қышқылын араластыру',d:'Колбаға 1 мл мұздай сірке қышқылын құйып, 1 г ұсақталған ацетанилид саламыз да, шыны таяқшамен араластырамыз.',
+ th:'Ацетанилид — анилиннің қорғалған түрі: ацетил тобы аминотоптың тотығуын болдырмайды және сақинаны шамадан тыс белсендірмейді.',
+ a:[['1 мл мұздай CH₃COOH құю',()=>{S.liq=.12;S.col='#f4f2ec';lab('Колбада: 1 мл CH₃COOH')}],['1 г ацетанилид салу',()=>{S.liq=.22;S.ppt=.5;S.pc='#fff';lab('Колбада: ацетанилид + сірке қышқылы')},'Ақ ұнтақ қышқылда ериді.'],['Шыны таяқшамен араластыру',()=>{S.ppt=0;lab('Біртекті ерітінді')},'Ацетанилид ерітілді.']]},
+{t:'Колбаны салқындату',d:'Нитрлеу реакциясы экзотермиялық, сондықтан колбаны мұзды ваннаға қойып, температураны төмендетеміз.',
+ th:'Температура төмен болса, динитроөнімдер мен тотығу өнімдері аз түзіледі, реакция басқарылады.',
+ a:[['Колбаны мұзды ваннаға қою',()=>{S.ice=1;lab('Мұзды ванна');tempTo(5)},'Температура 5°C-қа дейін түсуде.']],gate:()=>S.temp<=8},
+{t:'Нитрлеуші қоспаны тамшылатып қосу',d:'2 мл конц. H₂SO₄ мен 3,5 мл нитрлеуші қоспаны тамшылатып қосыңыз. Температура 12°C-тан асса, тоқтап, салқындатыңыз.',
+ th:`Электрофил түзілу: ${A}HNO₃ + 2H₂SO₄ → NO₂⁺ + H₃O⁺ + 2HSO₄⁻</span><br>NO₂⁺ (нитроний ионы) ацетанилидтің сақинасына шабуыл жасайды. NHCOCH₃ тобы — о-, п-бағыттаушы, көлемді болғандықтан п-изомер басым.`,
+ a:[['Тамшы қосу (10 тамшы)',function(){if(S.temp>12){log('Температура жоғары! Алдымен «Салқындату» батырмасын басыңыз.',1);return false}S.funnel=1;S.temp+=3.5;S.liq=Math.min(.55,S.liq+.03);S.col='#f3e08a';$('drop').setAttribute('opacity',1);setTimeout(()=>$('drop').setAttribute('opacity',0),250);lab('Нитрлеу жүруде');draw()},'Тамшы қосылды.',10]],
+ free:['Араластыру және салқындату',()=>{tempTo(Math.max(4,S.temp-6));log('Салқындатылуда, температура төмендейді.')}]},
+{t:'Қоспаны тұндыру',d:'Барлық реактив араласқаннан кейін қоспаны бір сағатқа бөлме температурасында қалдырамыз.',
+ th:'Бұл уақытта реакция аяқталады: ацетанилид → п-нитроацетанилид (негізгі өнім) + аздаған о-изомер.',
+ a:[['Бір сағат күту (жылдамдатылған)',()=>{S.ice=0;S.funnel=0;S.col='#f0c54a';S.liq=.5;tempTo(22);lab('Реакция аяқталды')},'1 сағат өтті, қоспа сарғайды.']]},
+{t:'Қоспаны мұзға құю',d:'Реакция қоспасын 20 г мұз бен суға құямыз. п-Нитроацетанилид тұнбаға түседі.',
+ th:`${A}C₆H₅NHCOCH₃ → (HNO₃/H₂SO₄) → п-O₂N–C₆H₄–NHCOCH₃</span>`,
+ a:[['Қоспаны 20 г мұзға құю',()=>{S.liq=.7;S.col='#f6ecb8';S.temp=8;lab('Мұздағы қоспа')},'Қоспа сұйылды.'],['10 минут күту',()=>{S.ppt=1;S.pc='#e8c94a';S.col='#f7f1d0';lab('Сары тұнба түсті')},'Сары п-нитроацетанилид тұнбасы түсті.']]},
+{t:'Сүзу және жуу',d:'Тұнбаны сүзіп, сумен жуамыз. Лакмуспен қышқыл қалдығы жоқ екенін тексереміз.',
+ th:'Қышқыл қалдығы өнімді ластап, келесі сатыда NaOH-ты жұмсап қояды. Жуу су бейтарап болғанша жалғасады.',
+ a:[['Тұнбаны воронкамен сүзу',()=>{S.liq=.08;S.col='#fff';lab('Тұнба сүзгіде')},'Тұнба бөлінді.'],['Лакмуспен тексеру',()=>{log('Лакмус қызарды: орта қышқыл. Жуу керек.',1)}],['Сумен жуу',()=>{S.pc='#efd45a'},'Су мен жуылды.'],['Лакмуспен қайта тексеру',()=>{lab('Тұнба таза')},'Лакмус түсі өзгермеді: орта бейтарап.']]},
+{t:'Гидролиз (сабындау)',d:'Тұнбаны 30 мл суы бар стақанға ауыстырып, NaOH қосып қайнатамыз. Ацетил тобы кетіп, п-нитроанилин түзіледі.',
+ th:`${A}п-O₂N–C₆H₄–NHCOCH₃ + NaOH → п-O₂N–C₆H₄–NH₂ + CH₃COONa</span><br>Қайнату барысында о-нитроацетанилид сабындалып, сүзіндіде қалады.`,
+ a:[['30 мл су қосу',()=>{S.liq=.6;S.col='#f4efc4';S.ppt=.7;lab('Тұнба + 30 мл су')}],['NaOH ерітіндісін қосу',()=>{S.col='#f6c945'}],['Қыздыру, қайнату',()=>{S.heat=1;S.bub=1;S.ppt=.2;S.col='#f59e0b';lab('Қайнап тұр');tempTo(100)},'Ерітінді қою сары түске боялды.'],['Қыздыруды тоқтату',()=>{S.heat=0;S.bub=0;tempTo(30)},'Қыздыру тоқтатылды.']]},
+{t:'Суыту, сүзу, қайта кристалдау',d:'Суытылған ерітіндіден п-нитроанилин тұнбасын сүземіз және 15–20 мл этил спиртінен қайта кристалдаймыз.',
+ th:'Қайта кристалдау: ыстық спиртте ерітіп, баяу суытқанда таза кристалдар түзіледі, қоспалар ерітіндіде қалады. п-Нитроанилин — сары кристалл.',
+ a:[['Ерітіндіні мұз ваннасында суыту',()=>{S.ice=1;tempTo(8);S.ppt=1;S.pc='#f2b705'},'Сары кристалдар түсті.'],['Сүзіп алу',()=>{S.ice=0;S.liq=.06;S.col='#fff';lab('Шикі п-нитроанилин')}],['15–20 мл этил спиртінен қайта кристалдау',()=>{S.liq=.3;S.col='#fde68a';S.temp=60;lab('Спирттегі ерітінді')},'Ыстық спиртте ерітілді.'],['Суытып, кристалдарды алу',()=>{S.ppt=1;S.pc='#eab308';S.col='#fffbe6';tempTo(22);lab('Таза п-нитроанилин, сары кристалл')},'Таза п-нитроанилин алынды.']]},
+{t:'Өнім шығымын есептеу',d:'Алынған заттың массасын өлшеп, теориялық шығымға қатысты пайызбен есептеңіз.',manual:1,
+ th:'Теория: 1 г ацетанилид (M = 135,17) = 7,4 ммоль → п-нитроанилин (M = 138,12) теориялық массасы ≈ 1,02 г.<br>Шығым = m(практ.) / m(теор.) · 100 %',
+ html:'<p>Практикалық масса, г: <input type="number" id="mp" step="0.01" min="0" max="1.5" value="0.60"> <button class="sm" id="cb">Есептеу</button></p><p id="res"></p>'},
+{t:'Бақылау сұрақтары',d:'Қорытынды сұрақтар. Жауабын көру үшін басыңыз.',manual:1,
+ th:'Зертхана аяқталды. Өнім: п-нитроанилин, сары кристалл.',
+ html:`<details><summary>1. Нитрлеу реакциясы дегеніміз не?</summary>Органикалық молекулаға –NO₂ тобын енгізу реакциясы.</details>
+<details><summary>2. Электрофильді орынбасу реакциясы дегеніміз не?</summary>Электрофильді бөлшек (E⁺) ароматты сақинадағы сутек атомын алмастыратын реакция (SE).</details>
+<details><summary>3. SE механизмі</summary>1) Электрофил түзілуі: NO₂⁺.<br>2) π-комплекс → σ-комплекс (аралық карбокатион) түзілуі, баяу саты.<br>3) H⁺ бөлініп, ароматтылықтың қалпына келуі.</details>`}
+];
+const prog=[];steps.forEach(()=>prog.push({k:0,c:0,done:false}));
+function mark(i){prog[i].done=true;}
+function render(){
+ const s=steps[cur],p=prog[cur];
+ $('st').textContent=(cur+1)+'. '+s.t;$('sd').textContent=s.d;$('th').innerHTML=s.th;$('sx').innerHTML=s.html||'';
+ const box=$('acts');box.innerHTML='';
+ (s.a||[]).forEach((a,i)=>{const n=a[3]||1;const b=document.createElement('button');
+  const isDone=p.k>i;b.textContent=(n>1?a[0].replace(/\(.*\)/,'')+' ('+(isDone?n:(p.k===i?p.c:0))+'/'+n+')':a[0]);
+  b.disabled=isDone||p.k!==i;if(isDone)b.className='done';
+  b.onclick=()=>{if(a[1]()===false)return;if(a[2])log(a[2]);else if(!a[2])$('log').innerHTML='<b>✔</b> '+a[0];p.c++;if(p.c>=n){p.k++;p.c=0}
+   if(p.k>=s.a.length)p.done=true;
+   draw();update();render2()};box.appendChild(b)});
+ if(s.free){const b=document.createElement('button');b.className='cool';b.textContent=s.free[0];b.onclick=()=>{s.free[1]()};box.appendChild(b)}
+ if(s.id===undefined&&cur===9){$('cb').onclick=()=>{const m=parseFloat($('mp').value)||0;const y=m/1.02*100;$('res').innerHTML='Шығым = '+m.toFixed(2)+' / 1,02 · 100 = <b>'+y.toFixed(1)+' %</b>'+(y>100?' (100%-дан жоғары: өнім құрғамаған болуы мүмкін)':'');mark(9);update()}}
+ if(cur===10)mark(10);
+ if(cur===9&&false){}
+ update();
+}
+function render2(){const s=steps[cur],p=prog[cur];[...$('acts').querySelectorAll('button')].forEach((b,i)=>{});render()}
+function update(){
+ const t=$('tabs');t.innerHTML='';
+ steps.forEach((s,i)=>{const b=document.createElement('button');b.textContent=i+1;b.className=(i===cur?'on ':'')+(prog[i].done?'ok':'');b.disabled=false;b.onclick=()=>{cur=i;render()};t.appendChild(b)});
+ $('pv').disabled=cur===0;$('nx').disabled=cur===steps.length-1;
+ $('pb').style.width=(steps.filter((s,i)=>prog[i].done).length/steps.length*100)+'%';
+ draw();
+}
+$('pv').onclick=()=>{cur--;render()};
+$('nx').onclick=()=>{cur++;if(cur===3){S.funnel=1;S.ice=1;if(S.liq<.2)S.liq=.22;if(S.temp>8)tempTo(5)}render()};
+log('Қадамдарды ретімен орындаңыз.');draw();render();
+</script>
+</body>
+</html>
